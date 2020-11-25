@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const hbsExpress = require('express-handlebars');
-const { route } = require('./routes/user');
 const routeHome = require('./routes/home');
 const routeUser = require('./routes/user');
 const routeMail = require('./routes/mail');
@@ -23,6 +22,7 @@ app.engine('hbs', hbs.engine) //declaration hbs
 app.set('view engine', 'hbs') //use hbs
 app.set('views', 'views') //set hi
 
+app.use(express.urlencoded({extended: true}))
 
 //routes
 app.use('/', routeHome)
