@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const hbsExpress = require('express-handlebars');
+const { route } = require('./routes/user');
+const routeHome = require('./routes/home');
 
 
 //server base
@@ -20,12 +22,7 @@ app.set('view engine', 'hbs') //use hbs
 app.set('views', 'views') //set hi
 
 
-app.get('/', (req, res) => {
-  res.status(200)
+//routes
 
-  res.render('user', {
-    title: 'Add new user',
-    isUser: true
-  })
-})
+app.use('/', routeHome)
 
