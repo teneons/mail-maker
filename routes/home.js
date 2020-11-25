@@ -3,8 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('home', {
-    title: 'Mail Maker',
-    isUser: true
+    title: 'Mail Maker'
   });
 });
 
