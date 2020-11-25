@@ -3,6 +3,7 @@ const app = express();
 const hbsExpress = require('express-handlebars');
 const { route } = require('./routes/user');
 const routeHome = require('./routes/home');
+const routeUser = require('./routes/user');
 
 
 //server base
@@ -23,6 +24,6 @@ app.set('views', 'views') //set hi
 
 
 //routes
-
 app.use('/', routeHome)
+app.use('/user', routeUser);
 
