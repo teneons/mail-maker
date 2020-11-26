@@ -1,18 +1,18 @@
-<div class="d-flex justify-content-center" action='/mail' method='POST'>
-  <form class="row g-3 col-10">
+<div class="d-flex justify-content-center">
+  <form class="row g-3 col-10" action='/user' method='POST'>
     <div class="col-md-4">
-      <label for="validationDefault01" class="form-label" name='firstName'>First name</label>
-      <input type="text" class="form-control" id="validationDefault01" required>
+      <label for="validationDefault01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationDefault01" name='firstName' required>
     </div>
 
     <div class="col-md-4">
-      <label for="validationDefault02" class="form-label" name='lastName'>Last name</label>
-      <input type="text" class="form-control" id="validationDefault02" required>
+      <label for="validationDefault02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationDefault02" name='lastName' required>
     </div>
 
     <div class="col-md-4">
-      <label for="validationDefault02" class="form-label" name='companyName'>Company name</label>
-      <input type="text" class="form-control" id="validationDefault02" required>
+      <label for="validationDefault02" class="form-label">Company name</label>
+      <input type="text" class="form-control" id="validationDefault02" name='companyName' required>
     </div>
     <div class="col-12">
       <button class="btn btn-outline-secondary" type="submit">Add</button>

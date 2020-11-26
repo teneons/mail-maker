@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
 
 
 router.post('/', async (req, res) => {
-  console.log(req.body.companyName)
   const data = new ModuleMail(req.body.firstName, req.body.lastName, req.body.companyName)
   await data.saveUserData()
 
