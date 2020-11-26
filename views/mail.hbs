@@ -14,6 +14,12 @@
     </ul>
   </div>
   {{else}}
-  <h2>You haven't added user</h2>
+  <div class="alert alert-dark text-center" role="alert">
+    <h2 class="text-secondary fw-bold">You haven't added user</h2>
+    <h5>However you can do this <a href="/user" class="text-decoration-none fw-bold text-white">here</a></h5>
+  </div>
   {{/if}}
 </div>
+<!-- Yes, on a `check` button needed pined onClick handler on a function with js fetch handler.
+    However I did not find API which does this and does this free.
+    But I can implement this feature by use fetch request and out valid/invalid response-->
