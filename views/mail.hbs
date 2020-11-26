@@ -1,10 +1,19 @@
 <div class="container mt-3">
+  {{#if userFullData}}
   <div class="row">
+    <h3>{{fstName}} {{lstName}}</h3>
     <ul class="list-group col">
+      {{#each userFullData}}
+      {{#each emails}}
       <li class="list-group-item">
-        mail@soft.com
+        {{this}}
         <button class="btn btn-outline-secondary float-right btn-sm">Check email</button>
       </li>
+      {{/each}}
+      {{/each}}
     </ul>
   </div>
+  {{else}}
+  <h2>You haven't added user</h2>
+  {{/if}}
 </div>

@@ -1,10 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const ModuleMail = require('../modules/ModuleMail');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+  const userFullData = await ModuleMail.getAllData() 
+
   res.render('mail', {
     title: 'Mail',
-    isMail: true
+    isMail: true,
+    userFullData
   });
 });
 
